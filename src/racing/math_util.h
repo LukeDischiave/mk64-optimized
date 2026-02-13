@@ -65,6 +65,7 @@ f32 sins(u16);
 f32 coss(u16);
 s32 is_between_angle(u16, u16, u16);
 f32 distance_if_visible(Vec3f, Vec3f, u16, f32, f32, f32);
+void vec_unit_z_rotX_rotY(s16 rotY, s16 rotX, Vec3f arg2); // added function to header so gcc compiles
 
 extern s32 D_802B91C0[]; // Unused
 extern Vec3f D_802B91C8;

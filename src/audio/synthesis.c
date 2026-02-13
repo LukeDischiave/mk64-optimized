@@ -463,8 +463,9 @@ Acmd* synthesis_process_note(s32 noteIndex, struct NoteSubEu* noteSubEu, struct 
                         var_a0_2 = (temp_t6 * 9) + sampleAddr;
                     } else {
                         var_a0_2 =
-                            dma_sample_data((uintptr_t) (temp_t6 * 9) + sampleAddr, ALIGN(((loopInfo_2 * 9) + 16), 4),
-                                            flags, &synthesisState->sampleDmaIndex);
+                            dma_sample_data(((uintptr_t) sampleAddr + (uintptr_t) (temp_t6 * 9)),
+                                            ALIGN(((loopInfo_2 * 9) + 16), 4), flags,
+                                            &synthesisState->sampleDmaIndex);
                     }
 
                     var_t2 = ((uintptr_t) var_a0_2) & 0xF;

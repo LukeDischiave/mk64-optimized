@@ -24,19 +24,19 @@ TARGET_N64 ?= 1
 #   ido - uses the SGI IRIS Development Option compiler, which is used to build
 #         an original matching N64 ROM
 #   gcc - uses the GNU C Compiler
-COMPILER ?= ido
+COMPILER ?= gcc
 $(eval $(call validate-option,COMPILER,ido gcc))
 
 # Add debug tools with 'make DEBUG=1' and modify the macros in include/debug.h
 # Adds crash screen enhancement and activates debug mode
 # Run make clean first
-DEBUG ?= 0
+DEBUG ?= 1
 
 # Avoid undefined behavior. Enables shiftability when making changes
-AVOID_UB ?= 0
+AVOID_UB ?= 1
 
 # Compile with GCC
-GCC ?= 0
+GCC ?= 1
 
 # VERSION - selects the version of the game to build
 #  us     - builds the 1997 North American version
@@ -327,7 +327,7 @@ AR      := $(CROSS)ar
 OBJDUMP := $(CROSS)objdump
 OBJCOPY := $(CROSS)objcopy
 
-OPT_FLAGS := -O2
+OPT_FLAGS := -Os
 
 ifeq ($(TARGET_N64),1)
   TARGET_CFLAGS := -nostdinc -DTARGET_N64 -D_LANGUAGE_C
@@ -655,6 +655,7 @@ $(BUILD_DIR)/%.o: %.s $(MIO0_FILES) $(RAW_TEXTURE_FILES)
 	$(V)$(AS) $(ASFLAGS) -o $@ $<
 
 $(EUC_JP_FILES:%.c=$(BUILD_DIR)/%.jp.o): CC := $(PYTHON) $(TOOLS_DIR)/asm_processor/build.py $(CC) -- $(AS) $(ASFLAGS) --
+$(EUC_JP_FILES:%.c=$(BUILD_DIR)/%.jp.o): OPT_FLAGS := -O2
 
 $(GLOBAL_ASM_O_FILES): CC := $(PYTHON) $(TOOLS_DIR)/asm_processor/build.py $(CC) -- $(AS) $(ASFLAGS) --
 

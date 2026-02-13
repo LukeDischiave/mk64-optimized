@@ -7,7 +7,7 @@
 #include "crash_screen.h"
 #include "main.h"
 
-#ifdef CRASH_SCREEN_ENHANCEMENT
+#if DEBUG || defined(CRASH_SCREEN_ENHANCEMENT)
 #include "debug/crash_screen_enhancement.h"
 #endif
 
