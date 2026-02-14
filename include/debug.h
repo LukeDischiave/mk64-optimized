@@ -14,7 +14,7 @@
  * Holding L + R + Z + A will start the creditis sequence.
  * Holding L + R + Z + B will start the ending sequence.
  */
-#define DVDL 1
+#define DVDL 0
 #if DVDL
 
 #define CHARACTER_BUFFER_SIZE 200 // size of the string buffer
