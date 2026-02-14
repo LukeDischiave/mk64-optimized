@@ -105,3 +105,6 @@ mingw64/
 
 # torch
 torch.hash.yml
+
+# build log
+build.log
