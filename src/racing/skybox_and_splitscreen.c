@@ -230,7 +230,6 @@ void init_rdp(void) {
     gDPSetBlendMask(gDisplayListHead++, 0xFF);
     gDPSetColorDither(gDisplayListHead++, G_CD_DISABLE);
     gDPPipeSync(gDisplayListHead++);
-    gSPClipRatio(gDisplayListHead++, FRUSTRATIO_1);
 }
 
 UNUSED void func_802A40A4(void) {
