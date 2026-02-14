@@ -12,12 +12,12 @@ glabel rspF3DBootEnd
 
 # 0x800D9040 D9C40-DB020
 glabel gspF3DEXTextStart
-.incbin "bin/lib/PR/f3d/F3DEX.bin"
+.incbin "bin/lib/PR/f3d/F3DEX3_BrZ_PA.bin"
 glabel gspF3DEXTextEnd
 
  # 0x800DA420 DB020-DC430
 glabel gspF3DLXTextStart
-.incbin "bin/lib/PR/f3d/F3DLX.bin"
+.incbin "bin/lib/PR/f3d/F3DEX3_BrZ_PA.bin"
 glabel gspF3DLXTextEnd
 
 # 0x800DB830 DC430-DD0A0
@@ -29,12 +29,12 @@ glabel rspAspMainEnd
 
 # 0x800F3D00 F4900-F5100
 glabel gspF3DEXDataStart
-.incbin "bin/lib/PR/f3d/F3DEX_data.bin"
+.incbin "bin/lib/PR/f3d/F3DEX3_BrZ_PA_data.bin"
 glabel gspF3DEXDataEnd
 
 # 0x800F4500 F5100-F5900
 glabel gspF3DLXDataStart
-.incbin "bin/lib/PR/f3d/F3DLX_data.bin"
+.incbin "bin/lib/PR/f3d/F3DEX3_BrZ_PA_data.bin"
 glabel gspF3DLXDataEnd
 
 # 0x800F4D00 F5900-F5C00

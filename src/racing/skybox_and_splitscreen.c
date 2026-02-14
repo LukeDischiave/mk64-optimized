@@ -19,8 +19,9 @@
 #include "main.h"
 #include "menus.h"
 
+// negate y scale and set max z to G_NEW_MAXZ/2 for f3dex3
 Vp D_802B8880[] = {
-    { { { 640, 480, 511, 0 }, { 640, 480, 511, 0 } } },
+    { { { 640, -480, G_NEW_MAXZ/2, 0 }, { 640, -480, G_NEW_MAXZ/2, 0 } } },
 };
 
 static Vtx sSkyboxP1[] = {

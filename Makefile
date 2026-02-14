@@ -47,7 +47,7 @@ $(eval $(call validate-option,VERSION,us eu.v10 eu.v11))
 
 ifeq      ($(VERSION),us)
   DEFINES += VERSION_US=1
-  GRUCODE   ?= f3dex_old
+  GRUCODE   ?= f3dex
 else ifeq ($(VERSION),eu.v10)
   DEFINES += VERSION_EU=1 VERSION_EU_V10=1
   GRUCODE   ?= f3dex_old
